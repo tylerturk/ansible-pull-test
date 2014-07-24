@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  connection: local
+
+  tasks:
+  - name: Ensure /opt directory
+    file: state=directory path=/opt
+
+  - name: Show group names
+    template: src=opt/group_membership dest=/opt/group_membership
